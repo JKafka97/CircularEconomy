@@ -76,6 +76,56 @@
     margin-right: auto;
     margin-bottom: 15px;
 }
+/*newsletter*/
+.newsletter {
+    background-color: var(--my-red);
+    color: var(--my-white);
+    height: 160px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.newsletter h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.newsletter-form {
+    margin-bottom: 25px;
+}
+.newsletter-form label {
+    font-size: 18px;
+}
+.newsletter-form input {
+    border-radius: 25px;
+    border: none;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    height: 50px;
+    width: 450px;
+    font-size: 20px;
+    text-align: center;
+}
+.email_news {
+    margin-left: 15px;
+}
+.button-news {
+    margin-left: 15px;
+    background-color: var(--my-white);
+    color: var(--my-red);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 @media (min-width: 1900px ) {
     .hero {
         height: 650px;
