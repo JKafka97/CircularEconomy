@@ -68,6 +68,10 @@ body {
 /* title & navigation */
 .navigation-section {
   background-color: var(--my-red);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .home {
@@ -138,6 +142,7 @@ body {
     background-color: var(--my-red);
     padding-top: 5px;
     padding-bottom: 5px;
+    z-index: 2;
   }
   .menu-item {
     display: block;
