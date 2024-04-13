@@ -238,3 +238,7 @@ form input[type="submit"] {
   border: 2px solid var(--my-red);
   color: var(--my-white);
 } */
+
+/* #eco-package-label {
+  display: none;
+} */
