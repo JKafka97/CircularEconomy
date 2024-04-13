@@ -239,6 +239,6 @@ form input[type="submit"] {
   color: var(--my-white);
 } */
 
-/* #eco-package-label {
+.display-none-class {
   display: none;
-} */
+}

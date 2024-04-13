@@ -3,10 +3,6 @@ const menuIcon = document.querySelector("header .menu-icon-container i");
 const navigation = document.querySelector(".navigation-menu");
 const navigationLinks = document.querySelectorAll(".menu-item");
 
-console.log(menuIcon);
-console.log(navigation);
-console.log(navigationLinks);
-
 // function which replace the hamburger and cross icon
 function replaceClass(element, oldClass, newClass) {
   element.classList.remove(oldClass);
@@ -35,3 +31,22 @@ navigationLinks.forEach((navLink) =>
     hiddenNav = true;
   })
 );
+
+// choice tag and process !!
+const foodSearch = document.getElementById("potraviny-prozkoumat");
+const homeSearch = document.getElementById("domacnost-prozkoumat");
+const textilSearch = document.getElementById("textil-prozkoumat");
+
+let choiceMainPage = "";
+
+foodSearch.addEventListener("click", () => {
+  choiceMainPage += "food-search";
+});
+homeSearch.addEventListener("click", () => {
+  choiceMainPage += "home-search";
+});
+textilSearch.addEventListener("click", () => {
+  choiceMainPage += "textil-search";
+});
+
+// let choiceSecondPage = "";
