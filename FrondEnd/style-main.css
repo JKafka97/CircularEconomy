@@ -33,8 +33,8 @@
 /*Co vám doma přibývá?*/
 .choice-box {
     text-align: center;
-    margin-top: 25px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 35px;
 }
 .choice-box h2 {
   font-size: 27px;
@@ -98,6 +98,7 @@
 }
 .newsletter-form label {
     font-size: 18px;
+    margin-right: 5px;
 }
 .newsletter-form input {
     border-radius: 25px;
@@ -132,6 +133,8 @@
     background-color: var(--my-red);
     color: var(--my-white);
 }
+/*Akce*/
+
 
 /*Huge screen*/
 @media (min-width: 1701px ) {
@@ -174,7 +177,7 @@
         height: 50px;
     }
 }
-/*Tablet screen*/
+/*Tablet and medium screen screen*/
 @media (max-width: 1700px) {
     .hero-text p {
         font-size: 20px;
@@ -184,7 +187,7 @@
     .newsletter {
         background-color: var(--my-red);
         color: var(--my-white);
-        height: 320px;
+        height: 190px;
         margin-bottom: 25px;
         width: 100%;
         display: flex;
@@ -197,7 +200,8 @@
     }
     .newsletter-form form {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        
         justify-content: center;
         align-items: center;
     }
@@ -213,10 +217,19 @@
         margin-top: 15px;
     }
 }
-/*Mobile*/
-@media (max-width: 665px) {
+/*Mobile and small tablet*/
+@media (max-width: 890px) {
     .hero {
         height: 500px;
+    }
+    .newsletter {
+        height: 330px;
+    }
+    .newsletter-form form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .hero-text p {
         font-size: 20px;
