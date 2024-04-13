@@ -1,19 +1,37 @@
-const checkboxes = document.querySelectorAll("input[type=checkbox]");
-console.log(checkboxes);
-let a;
+// select from html
+const menuIcon = document.querySelector("header .menu-icon-container i");
+const navigation = document.querySelector(".navigation-menu");
+const navigationLinks = document.querySelectorAll(".menu-item");
 
-checkboxes.forEach(function (checkbox) {
-  checkbox.addEventListener("change", function () {
-    enabledSettings = Array.from(checkboxes) // Convert checkboxes to an array to use filter and map.
-      .filter((i) => i.checked) // Use Array.filter to remove unchecked checkboxes.
-      .map((i) => i.value); // Use Array.map to extract only the checkbox values from the array of objects.
+console.log(menuIcon);
+console.log(navigation);
+console.log(navigationLinks);
 
-    console.log(enabledSettings);
-    console.log(checkbox);
-    a = checkbox;
-    checkbox.style.backgroundColor = "#da2128";
+// function which replace the hamburger and cross icon
+function replaceClass(element, oldClass, newClass) {
+  element.classList.remove(oldClass);
+  element.classList.add(newClass);
+}
 
-    myLabel = document.getElementById(checkbox.name);
-    myLabel.backgroundColor = "red";
-  });
+// open and close navigation
+let hiddenNav = true;
+menuIcon.addEventListener("click", () => {
+  if (hiddenNav) {
+    navigation.style.display = "block";
+    replaceClass(menuIcon, "fa-bars", "fa-xmark");
+    hiddenNav = false;
+  } else {
+    navigation.style.display = "none";
+    replaceClass(menuIcon, "fa-xmark", "fa-bars");
+    hiddenNav = true;
+  }
 });
+
+// close the navigation after click any link
+navigationLinks.forEach((navLink) =>
+  navLink.addEventListener("click", () => {
+    navigation.style.display = "none";
+    replaceClass(menuIcon, "fa-xmark", "fa-bars");
+    hiddenNav = true;
+  })
+);
