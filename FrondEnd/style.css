@@ -119,6 +119,40 @@ body {
   color: var(--my-black);
 }
 
+.menu-icon-container {
+  display: none;
+}
+
+.menu-icon-container i {
+  color: var(--my-white);
+  font-size: 22px;
+}
+
+@media (max-width: 665px) {
+  .navigation-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    width: 180px;
+    background-color: var(--my-red);
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .menu-item {
+    display: block;
+  }
+  .menu-icon-container {
+    display: block;
+  }
+}
+
+@media (min-width: 666px) {
+  .navigation-menu {
+    display: block !important;
+  }
+}
+
 /* search place */
 .section-title {
   padding-bottom: 20px;
