@@ -19,18 +19,31 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+.button {
+  background-color: var(--my-red);
+  color: var(--my-white);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .section-padding {
   padding-top: 100px;
 }
 
 .content-container {
   height: 100%;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  max-width: 1200px; /* max width for extra large device */
+  max-width: 1600px; /* max width for extra large device */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .content-container {
     /* all content is left and right aligned, margins 20px */
     width: calc(100% - 40px);
@@ -86,7 +99,7 @@ body {
   text-decoration: none;
   color: var(--my-white);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   padding-left: 20px;
   padding-right: 20px;
   margin-top: auto;
@@ -95,4 +108,36 @@ body {
 
 .menu-item a:hover {
   color: var(--my-black);
+}
+
+/* search place */
+.section-title {
+  padding-bottom: 20px;
+}
+
+.search-form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+form input[type="search"] {
+  border-radius: 25px;
+  border: 1px solid var(--my-black);
+  height: 50px;
+  width: 450px;
+}
+
+form input[type="submit"] {
+  background-color: var(--my-red);
+  color: var(--my-white);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  margin: 10px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
