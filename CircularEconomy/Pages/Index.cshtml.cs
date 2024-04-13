@@ -14,9 +14,13 @@ namespace CircularEconomy.Pages
             _logger = logger;
             _dbContext = dbContext;
         }
+        public Event FirstEvent { get; private set; }
 
         public void OnGet()
         {
+            FirstEvent = _dbContext.Event.Where(e => e.Id == 1).FirstOrDefault();
+
+            _logger.LogDebug($"{_dbContext.Event.Where(e => e.Id==1).FirstOrDefault()}");
         }
     }
 }
