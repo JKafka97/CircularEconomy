@@ -1,7 +1,11 @@
 using CircularEconomy.Data;
+using CircularEconomy.Helpers;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<DbFiller>();
 
 builder.Services.AddDbContext<CircularEconomyDbContext>(options =>
     options.UseSqlite("Data Source=CircularEconomy.db"));

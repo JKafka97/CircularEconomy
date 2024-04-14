@@ -6,5 +6,5 @@ public class EntityBase
 {
     public int Id { get; set; }
 
-    public TypeTag TypeTag { get; set; }
+
 }

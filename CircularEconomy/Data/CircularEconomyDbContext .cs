@@ -8,5 +8,6 @@ public class CircularEconomyDbContext : DbContext
     {
     }
 
-    public DbSet<Event> Event { get; set; }
+    public DbSet<Place> Place { get; set; }
+
 }

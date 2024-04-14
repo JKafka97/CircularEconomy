@@ -2,7 +2,7 @@
 
 public enum TypeTag
 {
-    Potraviny = 0,
-    Domacnost = 1,
-    Textil = 2
+    potraviny = 0,
+    domacnost = 1,
+    textil = 2
 }
