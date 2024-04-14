@@ -266,6 +266,14 @@ tr:hover .arrow {
 .footer-bottom img {
     width: 180px;
 }
+.other-section {
+    height: 840px; 
+    position: relative;
+}
+.other-footer {
+    position: absolute; 
+    bottom: 0px;
+}
 /*Huge screen*/
 @media (min-width: 1701px) {
   .menu-item a {
@@ -306,6 +314,15 @@ tr:hover .arrow {
     font-size: 16px;
     height: 50px;
   }
+/*footer responsive*/
+  .other-section {
+    height: 840px; 
+    position: relative;
+}
+.other-footer {
+    position: absolute; 
+    bottom: 0px;
+}
 }
 /*Tablet and medium screen screen*/
 @media (max-width: 1700px) {
@@ -347,7 +364,15 @@ tr:hover .arrow {
   .button-news {
     margin-top: 15px;
   }
-  
+/*footer responsive*/
+  .other-section {
+    height: 1050px; 
+    position: relative;
+}
+.other-footer {
+    position: absolute; 
+    bottom: 0px;
+}
 }
 /*Mobile and small tablet*/
 @media (max-width: 890px) {
@@ -402,5 +427,14 @@ tr:hover .arrow {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+/*footer responsive*/
+.other-section {
+    height: 1950px; 
+    position: relative;
+}
+.other-footer {
+    position: absolute; 
+    bottom: 0px;
 }
 }
