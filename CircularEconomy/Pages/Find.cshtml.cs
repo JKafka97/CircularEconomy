@@ -1,9 +1,5 @@
 ﻿using CircularEconomy.Data;
-using CircularEconomy.Helpers;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Linq;
-using System.Numerics;
 
 namespace CircularEconomy.Pages
 {
@@ -15,6 +11,7 @@ namespace CircularEconomy.Pages
         public FindModel(CircularEconomyDbContext dbContext)
         {
             _dbContext = dbContext;
+            ToShow.AddRange(_dbContext.Place);
         }
 
         public void OnPost(string secondhand,
@@ -25,11 +22,13 @@ namespace CircularEconomy.Pages
 
             )
         {
-            IQueryable<Place>  Places = _dbContext.Place;
+            IQueryable<Place> Places = _dbContext.Place;
+
             if (!string.IsNullOrEmpty(pscInput))
                 ToShow.AddRange(Places.Where(x => x.PSC == pscInput));
+
             if (!string.IsNullOrEmpty(secondhand))
-                ToShow.AddRange( Places.Where(x => x.PlaceActivity == Enums.PlaceActivity.nakoupit_udržitelně &&
+                ToShow.AddRange(Places.Where(x => x.PlaceActivity == Enums.PlaceActivity.nakoupit_udržitelně &&
                                         x.TypeTag == Enums.TypeTag.textil &&
                                         x.ActivityOption == Enums.ActivityOption.second_hand));
             if (!string.IsNullOrEmpty(markets))
@@ -101,7 +100,10 @@ namespace CircularEconomy.Pages
                                         x.TypeTag == Enums.TypeTag.domacnost &&
                                         x.ActivityOption == Enums.ActivityOption.oprava_spotřebičů));
 
-
+            if (ToShow.Count() == 0)
+            {
+                ToShow.AddRange(Places);
+            }
         }
     }
 }
