@@ -47,7 +47,8 @@
                     <input type="text"
                            maxlength="5"
                            name= "pscInput"
-                           placeholder="PSČ"/>
+                           placeholder="PSČ"
+                           value="@Model.PSCValue" />
                     <input class="button" type="submit" value="Hledej" />
                     <img src="img/search.png" alt="search-icon" />
                 </div>
@@ -56,6 +57,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="secondhand"
+                               checked="@Model.Secondhand"
                                id="second-hand" />
                         Second hand
                     </label>
@@ -64,7 +66,8 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="markets"
-                               id="markets" />
+                               checked="@Model.Markets"
+                               id="markets"/>
                         Bazary
                     </label>
 
@@ -72,6 +75,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="nopackmarkets"
+                               checked="@Model.NoPackMarkets"
                                id="no-pack-markets" />
                         Bezobalové obchody
                     </label>
@@ -80,6 +84,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="ecopackage"
+                               checked="@Model.EcoPackage"
                                id="eco-package" />
                         Eco-obaly
                     </label>
@@ -88,6 +93,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="localdeliver"
+                               checked="@Model.LocalDeliver"
                                id="local-deliver" />
                         Lokální dodavatelé
                     </label>
@@ -96,6 +102,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="bedynky"
+                               checked="@Model.Bedynky"
                                id="bedynky" />
                         Bedýnky
                     </label>
@@ -104,6 +111,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="swap"
+                               checked="@Model.Swap"
                                id="swap" />
                         Swap
                     </label>
@@ -112,6 +120,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="sdilenadilna"
+                               checked="@Model.SdilenaDilna"
                                id="sdilena-dilna" />
                         Sdílená dílna
                     </label>
@@ -120,6 +129,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="kontejnery"
+                               checked="@Model.Kontejnery"
                                id="kontejnery" />
                         Kontejnery
                     </label>
@@ -128,6 +138,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="nonprofitorg"
+                               checked="@Model.NonProfitOrg"
                                id="non-profit-org" />
                         Neziskové organizace
                     </label>
@@ -136,6 +147,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="reuse"
+                               checked="@Model.Reuse"
                                id="re-use" />
                         Reuse centra
                     </label>
@@ -144,6 +156,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="fixclothes"
+                               checked="@Model.FixClothes"
                                id="fix-clothes" />
                         Oprava oděvů
                     </label>
@@ -152,6 +165,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="fixshoes"
+                               checked="@Model.FixShoes"
                                id="fix-shoes" />
                         Oprava obuvi
                     </label>
@@ -160,6 +174,7 @@
                         <input class="tag-checkbox"
                                type="checkbox"
                                name="fixstuff"
+                               checked="@Model.FixStuff"
                                id="fix-stuff" />
                         Oprava spotřebičů
                     </label>

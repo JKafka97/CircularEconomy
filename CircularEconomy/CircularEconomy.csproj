@@ -8,11 +8,19 @@
 
   <ItemGroup>
     <None Remove="CircularEconomy.db" />
+    <None Remove="CircularEconomy.db-shm" />
+    <None Remove="CircularEconomy.db-wal" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="CircularEconomy.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CircularEconomy.db-shm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CircularEconomy.db-wal">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 

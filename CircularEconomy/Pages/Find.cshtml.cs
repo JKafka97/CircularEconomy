@@ -7,6 +7,22 @@ namespace CircularEconomy.Pages
     {
         private readonly CircularEconomyDbContext _dbContext;
         public List<Place> ToShow { get; private set; } = new List<Place>();
+        public string PSCValue { get; private set; }
+        public string Secondhand { get; private set; }
+        public string Markets { get; private set; }
+        public string NoPackMarkets { get; private set; }
+        public string EcoPackage { get; private set; }
+        public string LocalDeliver { get; private set; }
+        public string Bedynky { get; private set; }
+        public string Swap { get; private set; }
+        public string SdilenaDilna { get; private set; }
+        public string Kontejnery { get; private set; }
+        public string NonProfitOrg { get; private set; }
+        public string Reuse { get; private set; }
+        public string FixClothes { get; private set; }
+        public string FixShoes { get; private set; }
+        public string FixStuff { get; private set; }
+        public string PSCInput { get; private set; }
 
         public FindModel(CircularEconomyDbContext dbContext)
         {
@@ -24,9 +40,45 @@ namespace CircularEconomy.Pages
         {
             IQueryable<Place> Places = _dbContext.Place;
 
-            if (!string.IsNullOrEmpty(pscInput))
-                ToShow.AddRange(Places.Where(x => x.PSC == pscInput));
-
+            if (string.IsNullOrEmpty(secondhand) &&
+                string.IsNullOrEmpty(markets) &&
+                string.IsNullOrEmpty(nopackmarkets) &&
+                string.IsNullOrEmpty(ecopackage) &&
+                string.IsNullOrEmpty(localdeliver) &&
+                string.IsNullOrEmpty(bedynky) &&
+                string.IsNullOrEmpty(swap) &&
+                string.IsNullOrEmpty(sdilenadilna) &&
+                string.IsNullOrEmpty(kontejnery) &&
+                string.IsNullOrEmpty(nonprofitorg) &&
+                string.IsNullOrEmpty(reuse) &&
+                string.IsNullOrEmpty(fixclothes) &&
+                string.IsNullOrEmpty(fixshoes) &&
+                string.IsNullOrEmpty(fixstuff) &&
+                string.IsNullOrEmpty(pscInput))
+            {
+                ToShow.AddRange(Places);
+            }
+            if (string.IsNullOrEmpty(secondhand) &&
+                string.IsNullOrEmpty(markets) &&
+                string.IsNullOrEmpty(nopackmarkets) &&
+                string.IsNullOrEmpty(ecopackage) &&
+                string.IsNullOrEmpty(localdeliver) &&
+                string.IsNullOrEmpty(bedynky) &&
+                string.IsNullOrEmpty(swap) &&
+                string.IsNullOrEmpty(sdilenadilna) &&
+                string.IsNullOrEmpty(kontejnery) &&
+                string.IsNullOrEmpty(nonprofitorg) &&
+                string.IsNullOrEmpty(reuse) &&
+                string.IsNullOrEmpty(fixclothes) &&
+                string.IsNullOrEmpty(fixshoes) &&
+                string.IsNullOrEmpty(fixstuff))
+            {
+                ToShow.AddRange(Places);
+            }
+            else
+            {
+                ToShow.Clear();
+            }
             if (!string.IsNullOrEmpty(secondhand))
                 ToShow.AddRange(Places.Where(x => x.PlaceActivity == Enums.PlaceActivity.nakoupit_udržitelně &&
                                         x.TypeTag == Enums.TypeTag.textil &&
@@ -100,10 +152,26 @@ namespace CircularEconomy.Pages
                                         x.TypeTag == Enums.TypeTag.domacnost &&
                                         x.ActivityOption == Enums.ActivityOption.oprava_spotřebičů));
 
-            if (ToShow.Count() == 0)
+            if (!string.IsNullOrEmpty(pscInput))
             {
-                ToShow.AddRange(Places);
+                ToShow = ToShow.Where(x => x.PSC == pscInput).ToList();
             }
+            PSCValue = pscInput;
+            Secondhand = secondhand;
+            Markets = markets;
+            NoPackMarkets = nopackmarkets;
+            EcoPackage = ecopackage;
+            LocalDeliver = localdeliver;
+            Bedynky = bedynky;
+            Swap = swap;
+            SdilenaDilna = sdilenadilna;
+            Kontejnery = kontejnery;
+            NonProfitOrg = nonprofitorg;
+            Reuse = reuse;
+            FixClothes = fixclothes;
+            FixShoes = fixshoes;
+            FixStuff = fixstuff;
+            PSCInput = pscInput;
         }
     }
 }
