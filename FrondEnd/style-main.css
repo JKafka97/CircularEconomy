@@ -135,7 +135,145 @@
   color: var(--my-white);
 }
 /*Akce*/
+.akce {
+    margin-bottom: 35px;
+}
+.akce table {
+    width: 100%;
+}
+.akce h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+table td {
+    font-size: 20px;
+}
+tr {
+    border-bottom: 1px solid #686767c4;
+}
+td {
+    padding: 7px;
+}
+.table-header td {
+    color: #686767;
+}
+.table-row-tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tag {
+    border: 1px solid #686767;
+    border-radius: 20px;
+    padding: 2px 17px;
+    margin-right: 5px;
+    margin-top: 6px;
+}
+.arrow {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+}
+/*row hover*/
+tr:hover {
+    background-color: #b4b4b41f;
+}
+tr:hover .tag {
+    background-color: var(--my-red);
+    border: 1px solid var(--my-red);
+    color: var(--my-white);
+}
+tr:hover .arrow {
+    border: 1px dashed black;
+    background-color: #b4b4b4a2;
+}
+.button a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+.button:hover a {
+    text-decoration: none;
+    color: var(--my-red);
+    font-size: 14px;
+}
+/*Sdileni akce*/
+.sdileni-akce {
+    border-left: 2px solid black;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.sdileni-akce img {
+    width: 90px;
+}
+.sdileni-akce button {
+    height: 57px;
+    text-align: center;
+    padding-top: 10px;
+    width: 200px;
+}
+.sdileni-akce-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 40px;
+}
 
+/*footer*/
+.footer {
+    background-color: var(--my-red);
+    color: var(--my-white);
+    height: 200px;
+    padding-bottom: 26px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-logo {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: left;
+    gap: 45px;
+}
+.footer-bottom {
+    margin-top: 35px;
+}
+.footer-bottom img {
+    width: 180px;
+}
+.other-section {
+    height: 840px; 
+    position: relative;
+}
+.other-footer {
+    position: absolute; 
+    bottom: 0px;
+}
 /*Huge screen*/
 @media (min-width: 1701px) {
   .menu-item a {
@@ -176,6 +314,15 @@
     font-size: 16px;
     height: 50px;
   }
+/*footer responsive*/
+  .other-section {
+    height: 840px; 
+    position: relative;
+}
+.other-footer {
+    position: absolute; 
+    bottom: 0px;
+}
 }
 /*Tablet and medium screen screen*/
 @media (max-width: 1700px) {
@@ -217,6 +364,15 @@
   .button-news {
     margin-top: 15px;
   }
+/*footer responsive*/
+  .other-section {
+    height: 1050px; 
+    position: relative;
+}
+.other-footer {
+    position: absolute; 
+    bottom: 0px;
+}
 }
 /*Mobile and small tablet*/
 @media (max-width: 890px) {
@@ -237,4 +393,48 @@
     width: 75%;
     margin-bottom: 25px;
   }
+  .sdileni-akce {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    gap: 20px;
+    text-align: center;
+}
+.sdileni-akce-text {
+    gap: 10px;
+}
+/*footer*/
+.footer {
+    height: 250px;
+}
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.menu {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/*footer responsive*/
+.other-section {
+    height: 1950px; 
+    position: relative;
+}
+.other-footer {
+    position: absolute; 
+    bottom: 0px;
+}
 }
