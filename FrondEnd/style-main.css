@@ -267,7 +267,7 @@ tr:hover .arrow {
     width: 180px;
 }
 .other-section {
-    height: 840px; 
+    height: 540px; 
     position: relative;
 }
 .other-footer {
@@ -323,6 +323,14 @@ tr:hover .arrow {
     position: absolute; 
     bottom: 0px;
 }
+.other-section2 {
+    height: 500px; 
+    position: relative;
+}
+.other-footer2 {
+    position: absolute; 
+    bottom: 0px;
+}
 }
 /*Tablet and medium screen screen*/
 @media (max-width: 1700px) {
@@ -373,6 +381,14 @@ tr:hover .arrow {
     position: absolute; 
     bottom: 0px;
 }
+.other-section2 {
+    height: 620px; 
+    position: relative;
+}
+.other-footer2 {
+    position: absolute; 
+    bottom: 0px;
+}
 }
 /*Mobile and small tablet*/
 @media (max-width: 890px) {
@@ -406,35 +422,43 @@ tr:hover .arrow {
     width: 50%;
     gap: 20px;
     text-align: center;
-}
-.sdileni-akce-text {
-    gap: 10px;
-}
-/*footer*/
-.footer {
-    height: 250px;
-}
-.top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.menu {
-    margin-top: 35px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-/*footer responsive*/
-.other-section {
-    height: 1950px; 
-    position: relative;
-}
-.other-footer {
-    position: absolute; 
-    bottom: 0px;
-}
+    }
+    .sdileni-akce-text {
+        gap: 10px;
+    }
+    /*footer*/
+    .footer {
+        height: 250px;
+    }
+    .top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .menu {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    /*footer responsive*/
+    .other-section {
+        height: 1950px; 
+        position: relative;
+    }
+    .other-footer {
+        position: absolute; 
+        bottom: 0px;
+    }
+    .other-section2 {
+        height: 1530px; 
+        position: relative;
+    }
+    .other-footer2 {
+        position: absolute; 
+        bottom: 0px;
+    }
 }
