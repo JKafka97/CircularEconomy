@@ -309,6 +309,9 @@ form input[type="submit"] {
 .action-form .button {
   width: 200px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .action-form span {
