@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulář - Cikrulární Brno</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/082ee5372c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- title & navigation -->
+    <header class="navigation-section">
+      <div class="content-container home">
+        <div class="main-title">
+          <h1><a href="#go-home">Cirkulární Brno</a></h1>
+        </div>
+        <nav class="navigation-menu">
+          <ul class="menu">
+            <li class="menu-item"><a href="#">najdi místo</a></li>
+            <li class="menu-item"><a href="#">kurzy</a></li>
+            <li class="menu-item"><a href="#">akce</a></li>
+          </ul>
+        </nav>
+        <div class="menu-icon-container">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- formular -->
+    <section class="formular">
+      <div class="content-container section-padding">
+        <div class="section-title">
+          <h2>Formulář pro sdílení událostí</h2>
+        </div>
+        <p class="text">
+          Máte skvělou událost, kterou byste chtěli sdílet s ostatními? Vyplňte
+          náš jednoduchý formulář a dejte vaší události větší dosah! Stačí
+          vyplnit základní informace o události a my se s vámi spojíme pro další
+          detaily. Vaše událost, ať už jde o výměnnou akci, bleší trh, pop-up
+          second hand událost nebo jinou udržitelnou aktivitu, se může objevit
+          na našem webu a přilákat větší pozornost. Dejte svým událostem šanci
+          být v centru pozornosti ještě dnes!
+        </p>
+        <hr class="form-hr" />
+
+        <form class="action-form">
+          <div>
+            <span>
+              <label for="form-name">Jméno:</label>
+              <input type="text" id="form-name" name="form-name" value="" />
+            </span>
+            <span>
+              <label for="form-email">Email:</label>
+              <input type="text" id="form-email" name="form-email" value="" />
+            </span>
+          </div>
+
+          <div>
+            <span>
+              <label for="form-action-name">Název události:</label>
+              <input
+                type="text"
+                id="form-action-name"
+                name="form-action-name"
+                value=""
+              />
+            </span>
+            <span>
+              <label for="form-action-adress">Adresa:</label>
+              <input
+                type="text"
+                id="form-action-adress"
+                name="form-action-adress"
+                value="Ulice č.p., PSČ"
+              />
+            </span>
+          </div>
+
+          <div>
+            <label for="form-action-tickets">Vstupenky:</label>
+            <input
+              type="text"
+              id="form-action-tickets"
+              name="form-action-tickets"
+              value=" Např.: Dospělí - 250Kč"
+            />
+          </div>
+
+          <div>
+            <span>
+              <label for="form-action-date-from">Datum od:</label>
+              <input
+                type="text"
+                id="form-action-date-from"
+                name="form-action-date-from"
+                value="16/06/2024"
+              />
+            </span>
+            <span>
+              <label for="form-action-date-to">Datum do:</label>
+              <input
+                type="text"
+                id="form-action-date-to"
+                name="form-action-date-to"
+                value="18/04/2024"
+              />
+            </span>
+          </div>
+
+          <div>
+            <label for="form-action-text">Popis události:</label>
+            <input
+              type="text"
+              id="form-action-text"
+              name="form-action-text"
+              value="Max. 250 znaků"
+            />
+          </div>
+
+          <input class="button" type="submit" value="Sdílet akci" />
+        </form>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

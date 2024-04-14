@@ -164,7 +164,7 @@ body {
 }
 
 .search-form {
-  margin-top: 30px;
+  margin-top: 0px;
   margin-bottom: 30px;
   position: relative;
   /* border: 2px solid blue; */
@@ -241,4 +241,83 @@ form input[type="submit"] {
 
 .display-none-class {
   display: none;
+}
+
+/* formular */
+.form-hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 2px;
+  background: gray;
+}
+
+.action-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.action-form input[type="text"] {
+  border-radius: 0px;
+  border: 2px solid gray;
+  height: 50px;
+  width: 300px;
+  max-width: calc(100% - 20px);
+  font-size: 20px;
+  color: gray;
+  text-align: center;
+}
+
+/* .action-form label {
+  width: 40%;
+}
+.action-form input {
+  width: 60%;
+} */
+
+.action-form {
+  display: flex;
+}
+
+.action-form label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+
+#form-action-text {
+  height: 130px;
+  width: 500px;
+}
+
+@media (max-width: 800px) {
+  #form-action-text {
+    width: 300px;
+  }
+}
+@media (max-width: 505px) {
+  .action-form input[type="text"] {
+    width: 200px;
+  }
+}
+@media (max-width: 504px) {
+  .action-form label {
+    text-align: left;
+  }
+}
+
+.action-form .button {
+  width: 200px;
+  margin-top: 20px;
+}
+
+.action-form span {
+  white-space: nowrap;
+}
+
+@media (max-width: 2012px) {
+  .action-form input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
